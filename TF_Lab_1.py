@@ -14,6 +14,7 @@ hello = tf.constant('Hello, TensorFlow')
 #######################################################
 
 # 1. Build graph(tensors)
+node0 = tf.constant(3.0, tf.float32)
 node1 = tf.constant(3.0, tf.float32)
 # 데이터 타입도 바로 줄 수 있다.
 node2 = tf.constant(4.0, tf.float32) # also tf.float32 implicitly
@@ -86,9 +87,3 @@ print(sess.run(adder_node, feed_dict={a : [1,3], b: [2,4]}))
 # print(sess.run(n3))
 # print(sess.run(c, feed_dict={a : 3.0, b : 4.5}))
 # print(sess.run(c, feed_dict={a : [1, 2, 3], b : [4, 5, 6]}))
-
-
-
-
-
-
