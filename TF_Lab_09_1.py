@@ -28,6 +28,7 @@ import numpy as np
 #     print(h, c, a)
 
 # 이렇게 하면 학습을 정확히 하지 못한다.
+
 ####################################################################
 
 # x_data = np.array([[0,0], [0,1], [1,0], [1,1]], dtype=np.float32)
@@ -111,40 +112,6 @@ import numpy as np
 
 ################################################################################333
 
-# code practice 1
-
-# x_data = np.array([[0,0], [0,1], [1,0], [1,1]], dtype=np.float32)
-# y_data = np.array([[0], [1], [1], [0]], dtype=np.float32)
-#
-# X = tf.placeholder(tf.float32)
-# Y = tf.placeholder(tf.float32)
-#
-# W1 = tf.Variable(tf.random_normal([2,2]))
-# b1 = tf.Variable(tf.random_normal([2]))
-# layer1 = tf.sigmoid(tf.matmul(X, W1) + b1)
-#
-# W2 = tf.Variable(tf.random_normal([2,1]))
-# b2 = tf.Variable(tf.random_normal([1]))
-# H = tf.sigmoid(tf.matmul(layer1, W2) + b2)
-# cost = -tf.reduce_mean(Y*tf.log(H) + (1-Y)*tf.log(1-H))
-# train = tf.train.GradientDescentOptimizer(learning_rate=0.1).minimize(cost)
-#
-# predicted = tf.cast(H > 0.5, dtype=tf.float32)
-# accuracy = tf.reduce_mean(tf.cast(tf.equal(predicted, Y), dtype=tf.float32))
-#
-# with tf.Session() as sess:
-#     sess.run(tf.global_variables_initializer())
-#
-#     for step in range(5001):
-#         sess.run(train, feed_dict={X : x_data, Y : y_data})
-#         if step % 100 == 0:
-#             print(step, sess.run(cost, feed_dict={X : x_data, Y : y_data}), sess.run([W1, W2]))
-#
-#     h, c, a = sess.run([H, predicted, accuracy], feed_dict={X : x_data, Y : y_data})
-#     print(h, c, a)
-
-##############################################################################33
-
 # Exercise
 # Wide and Deep NN for MNIST
 
@@ -157,31 +124,28 @@ mnist = input_data.read_data_sets("MNIST_data/", one_hot=True)
 X = tf.placeholder(tf.float32, shape=[None, 784])
 Y = tf.placeholder(tf.float32, shape=[None, 10])
 
-W1 = tf.Variable(tf.random_normal([784, 50]))
-b1 = tf.Variable(tf.random_normal([50]))
-layer1 = tf.sigmoid(tf.matmul(X, W1) + b1)
+W1 = tf.Variable(tf.random_normal([784, 512]))
+b1 = tf.Variable(tf.random_normal([512]))
+layer1 = tf.nn.relu(tf.matmul(X, W1) + b1)
 
-W2 = tf.Variable(tf.random_normal([50, 10]))
-b2 = tf.Variable(tf.random_normal([10]))
-layer2 = tf.sigmoid(tf.matmul(layer1, W2) + b2)
+W2 = tf.Variable(tf.random_normal([512, 512]))
+b2 = tf.Variable(tf.random_normal([512]))
+layer2 = tf.nn.relu(tf.matmul(layer1, W2) + b2)
 
-W3 = tf.Variable(tf.random_normal([10, 10]))
-b3 = tf.Variable(tf.random_normal([10]))
-layer3 = tf.sigmoid(tf.matmul(layer2, W3) + b3)
+W3 = tf.Variable(tf.random_normal([512, 512]))
+b3 = tf.Variable(tf.random_normal([512]))
+layer3 = tf.nn.relu(tf.matmul(layer2, W3) + b3)
 
-W4 = tf.Variable(tf.random_normal([10, 10]))
-b4 = tf.Variable(tf.random_normal([10]))
-layer4 = tf.sigmoid(tf.matmul(layer3, W4) + b4)
+W4 = tf.Variable(tf.random_normal([512, 512]))
+b4 = tf.Variable(tf.random_normal([512]))
+layer4 = tf.nn.relu(tf.matmul(layer3, W4) + b4)
 
-W5 = tf.Variable(tf.random_normal([10, 10]))
+W5 = tf.Variable(tf.random_normal([512, 10]))
 b5 = tf.Variable(tf.random_normal([10]))
-H = tf.sigmoid(tf.matmul(layer4, W5) + b5)
+H = tf.matmul(layer4, W5) + b5
 
-cost = tf.reduce_mean(-tf.reduce_sum(Y*tf.log(H), axis=1))
-optimizer = tf.train.GradientDescentOptimizer(learning_rate=0.1).minimize(cost)
-
-is_correct = tf.equal(tf.arg_max(H, 1), tf.arg_max(Y, 1))
-accuracy = tf.reduce_mean(tf.cast(is_correct, tf.float32))
+cost = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(logits=H, labels=Y))
+optimizer = tf.train.AdamOptimizer(learning_rate=0.01).minimize(cost)
 
 training_epochs = 15
 batch_size = 100
@@ -192,14 +156,21 @@ with tf.Session() as sess:
     for epoch in range(training_epochs):
         avg_cost = 0
         total_batch = int(mnist.train.num_examples / batch_size)
+
         for i in range(total_batch):
             batch_xs, batch_ys = mnist.train.next_batch(batch_size)
             c, _ = sess.run([cost, optimizer], feed_dict={X : batch_xs, Y : batch_ys})
             avg_cost += c / total_batch
         print('Epoch : ', '%04d' % (epoch + 1), 'cost = ', '{:.9f}'.format(avg_cost))
 
-    print("Accuracy : ", accuracy.eval(session=sess, feed_dict={X : mnist.test.images, Y : mnist.test.labels}))
+    print('Learning Finished!')
 
+    # Test model and check accuracy
+    correct_prediction = tf.equal(tf.argmax(H, 1), tf.argmax(Y, 1))
+    accuracy = tf.reduce_mean(tf.cast(correct_prediction, tf.float32))
+    print("Accuracy : ", sess.run(accuracy, feed_dict={X : mnist.test.images, Y : mnist.test.labels}))
+
+    # Get one and predict
     r = random.randint(0, mnist.test.num_examples - 1)
     # 랜덤한 숫자 하나를 읽어온다.
     print("Label : ", sess.run(tf.argmax(mnist.test.labels[r:r+1], 1)))
