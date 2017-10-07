@@ -126,19 +126,19 @@ Y = tf.placeholder(tf.float32, shape=[None, 10])
 
 W1 = tf.Variable(tf.random_normal([784, 512]))
 b1 = tf.Variable(tf.random_normal([512]))
-layer1 = tf.nn.relu(tf.matmul(X, W1) + b1)
+layer1 = tf.sigmoid(tf.matmul(X, W1) + b1)
 
 W2 = tf.Variable(tf.random_normal([512, 512]))
 b2 = tf.Variable(tf.random_normal([512]))
-layer2 = tf.nn.relu(tf.matmul(layer1, W2) + b2)
+layer2 = tf.sigmoid(tf.matmul(layer1, W2) + b2)
 
 W3 = tf.Variable(tf.random_normal([512, 512]))
 b3 = tf.Variable(tf.random_normal([512]))
-layer3 = tf.nn.relu(tf.matmul(layer2, W3) + b3)
+layer3 = tf.sigmoid(tf.matmul(layer2, W3) + b3)
 
 W4 = tf.Variable(tf.random_normal([512, 512]))
 b4 = tf.Variable(tf.random_normal([512]))
-layer4 = tf.nn.relu(tf.matmul(layer3, W4) + b4)
+layer4 = tf.sigmoid(tf.matmul(layer3, W4) + b4)
 
 W5 = tf.Variable(tf.random_normal([512, 10]))
 b5 = tf.Variable(tf.random_normal([10]))
