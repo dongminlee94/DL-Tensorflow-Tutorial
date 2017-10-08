@@ -9,36 +9,36 @@ mnist = input_data.read_data_sets("MNIST_data/", one_hot=True)
 X = tf.placeholder(tf.float32, shape=[None, 784])
 Y = tf.placeholder(tf.float32, shape=[None, 10])
 
-with tf.name_scope("layer1") as scope1:
+with tf.variable_scope("layer1"):
     W1 = tf.Variable(tf.random_normal([784, 512]), name='weight1')
     b1 = tf.Variable(tf.random_normal([512]), name='bias1')
     layer1 = tf.sigmoid(tf.matmul(X, W1) + b1)
 
-with tf.name_scope("layer2") as scope2:
+with tf.variable_scope("layer2"):
     W2 = tf.Variable(tf.random_normal([512, 512]), name='weight2')
     b2 = tf.Variable(tf.random_normal([512]), name='bias2')
     layer2 = tf.sigmoid(tf.matmul(layer1, W2) + b2)
 
-with tf.name_scope("layer3") as scope3:
+with tf.variable_scope("layer3"):
     W3 = tf.Variable(tf.random_normal([512, 512]), name='weight3')
     b3 = tf.Variable(tf.random_normal([512]), name='bias3')
     layer3 = tf.sigmoid(tf.matmul(layer2, W3) + b3)
 
-with tf.name_scope("layer4") as scope4:
+with tf.variable_scope("layer4"):
     W4 = tf.Variable(tf.random_normal([512, 512]), name='weight4')
     b4 = tf.Variable(tf.random_normal([512]), name='bias4')
     layer4 = tf.sigmoid(tf.matmul(layer3, W4) + b4)
 
-with tf.name_scope("layer5") as scope5:
+with tf.variable_scope("layer5"):
     W5 = tf.Variable(tf.random_normal([512, 10]), name='weight5')
     b5 = tf.Variable(tf.random_normal([10]), name='bias5')
     H = tf.matmul(layer4, W5) + b5
 
-with tf.name_scope("cost") as cost1:
+with tf.variable_scope("cost"):
     cost = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(logits=H, labels=Y))
     cost_summ = tf.summary.scalar("cost", cost)
 
-with tf.name_scope("optimizer") as optimizer1:
+with tf.variable_scope("optimizer"):
     optimizer = tf.train.AdamOptimizer(learning_rate=0.01).minimize(cost)
 
 training_epochs = 15
