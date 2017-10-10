@@ -29,7 +29,7 @@ b5 = tf.Variable(tf.random_normal([10]))
 H = tf.matmul(L4, W5) + b5
 
 cost = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(logits=H, labels=Y))
-optimizer = tf.train.AdamOptimizer(learning_rate=0.1).minimize(cost)
+optimizer = tf.train.AdamOptimizer(learning_rate=0.001).minimize(cost)
 
 keep_prob = tf.placeholder(tf.float32)
 
@@ -60,16 +60,12 @@ with tf.Session() as sess:
         # 여기 for문이 끝나면 1epoch가 끝난다.
         print('Epoch : ', '%04d' % (epoch + 1), 'cost = ', '{:.9f}'.format(avg_cost))
 
-    print("Accuracy : ", accuracy.eval(session=sess, feed_dict={X : mnist.test.images, Y : mnist.test.labels}))
-
+    # Test model and check accuracy
     correct_prediction = tf.equal(tf.argmax(H, 1), tf.argmax(Y, 1))
     accuracy = tf.reduce_mean(tf.cast(correct_prediction, tf.float32))
-
-    print("#######################################################3")
     print('Accuracy : ', sess.run(accuracy, feed_dict={X : mnist.test.images, Y : mnist.test.labels, keep_prob : 1}))
 
-#######################################################################
-
+    # Get one and predict
     r = random.randint(0, mnist.test.num_examples - 1)
     # 랜덤한 숫자 하나를 읽어온다.
     print("Label : ", sess.run(tf.argmax(mnist.test.labels[r:r+1], 1)))
@@ -77,4 +73,3 @@ with tf.Session() as sess:
     print("Prediction : ", sess.run(tf.argmax(H, 1), feed_dict={X : mnist.test.images[r: r+1]}))
     plt.imshow(mnist.test.images[r : r+1].reshape(28, 28), cmap='Greys', interpolation='nearest')
     plt.show()
-
