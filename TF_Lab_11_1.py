@@ -11,7 +11,7 @@ plt.show()
 
 weight = tf.constant([[[[1.]], [[1.]]], [[[1.]], [[1.]]]])
 print(weight.shape)
-#
+
 conv2d = tf.nn.conv2d(image, weight, strides=[1, 1, 1, 1], padding='SAME')
 # input : [batch, in_height, in_width, in_channels] 형식. 28x28x1 형식의 손글씨 이미지.
 # filter : [filter_height, filter_width, in_channels, out_channels] 형식. 3, 3, 1, 32의 w.
