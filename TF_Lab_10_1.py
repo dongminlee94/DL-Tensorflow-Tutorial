@@ -9,6 +9,8 @@ mnist = input_data.read_data_sets("MNIST_data/", one_hot=True)
 keep_prob = tf.placeholder(tf.float32)
 # dropout (keep_prob) rate 0.7 on training, but should be 1 for testing
 # 밑에서 0.7로 트레이닝을 시키고, 테스팅할때는 1로 한다.
+# Network의 학습, 테스팅에 얼마나 유지, 학습에 사용할 지 설정값을 placeholder 변수로 초기화한다.
+# Train과 Testing 두 곳에서 각각 다른 값을 사용해야하기 때문에..
 training_epochs = 15
 # epoch이라는 것은 전체를 두고 1번 돌리는 값
 # 여기서는 총 15번을 돌린다고 한다.
@@ -63,6 +65,7 @@ with tf.Session() as sess:
         for i in range(total_batch):
             batch_xs, batch_ys = mnist.train.next_batch(batch_size)
             c, _ = sess.run([cost, optimizer], feed_dict={X : batch_xs, Y : batch_ys, keep_prob: 0.7})
+            # keep_prob: 0.7은 70%로 적용시킨다는 뜻
             avg_cost += c / total_batch
         # 여기 for문이 끝나면 1epoch가 끝난다.
         print('Epoch : ', '%04d' % (epoch + 1), 'cost = ', '{:.9f}'.format(avg_cost))
