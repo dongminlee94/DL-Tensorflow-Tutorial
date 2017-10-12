@@ -51,39 +51,39 @@ print(sess.run(adder_node, feed_dict={a : [1,3], b: [2,4]}))
 
 # code practice 1
 
-# hello = tf.constant('Hello, Tensorflow')
-# # print(sess.run(hello))
-#
-# node1 = tf.constant(3.0, tf.float32)
-# node2 = tf.constant(4.5)
-# node3 = node1 + node2
-#
-# sess = tf.Session()
-# # print("sess.run(node3) : ", sess.run(node3))
-#
-# a = tf.placeholder(tf.float32)
-# b = tf.placeholder(tf.float32)
-# adder_node = a + b
-#
-# print(sess.run(adder_node, feed_dict={a : 3, b : 4.5}))
-# print(sess.run(adder_node, feed_dict={a : [3, 4, 5], b : [1, 5, 6]}))
+hello = tf.constant('Hello, Tensorflow')
+# print(sess.run(hello))
+
+node1 = tf.constant(3.0, tf.float32)
+node2 = tf.constant(4.5)
+node3 = node1 + node2
+
+sess = tf.Session()
+# print("sess.run(node3) : ", sess.run(node3))
+
+a = tf.placeholder(tf.float32)
+b = tf.placeholder(tf.float32)
+adder_node = a + b
+
+print(sess.run(adder_node, feed_dict={a : 3, b : 4.5}))
+print(sess.run(adder_node, feed_dict={a : [3, 4, 5], b : [1, 5, 6]}))
 
 #######################################################################################
 
 # code practice 2
 
-# Hello = tf.constant('Hello, Tensorflow')
-#
-# n1 = tf.constant(3.0, tf.float32)
-# n2 = tf.constant(4.5, tf.float32)
-# n3 = n1 + n2
-#
-# a = tf.placeholder(tf.float32)
-# b = tf.placeholder(tf.float32)
-# c = a + b
-#
-# sess = tf.Session()
-# print(sess.run(Hello))
-# print(sess.run(n3))
-# print(sess.run(c, feed_dict={a : 3.0, b : 4.5}))
-# print(sess.run(c, feed_dict={a : [1, 2, 3], b : [4, 5, 6]}))
+Hello = tf.constant('Hello, Tensorflow')
+
+n1 = tf.constant(3.0, tf.float32)
+n2 = tf.constant(4.5, tf.float32)
+n3 = n1 + n2
+
+a = tf.placeholder(tf.float32)
+b = tf.placeholder(tf.float32)
+c = a + b
+
+sess = tf.Session()
+print(sess.run(Hello))
+print(sess.run(n3))
+print(sess.run(c, feed_dict={a : 3.0, b : 4.5}))
+print(sess.run(c, feed_dict={a : [1, 2, 3], b : [4, 5, 6]}))
