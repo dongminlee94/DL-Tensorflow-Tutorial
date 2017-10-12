@@ -8,6 +8,11 @@ tf.set_random_seed(777)
 
 mnist = input_data.read_data_sets("MNIST_data/", one_hot=True)
 
+# parameters
+keep_prob = tf.placeholder(tf.float32)
+training_epochs = 15
+batch_size = 100
+
 X = tf.placeholder(tf.float32, shape=[None, 784])
 Y = tf.placeholder(tf.float32, shape=[None, 10])
 
@@ -43,13 +48,8 @@ with tf.variable_scope("cost"):
 with tf.variable_scope("optimizer"):
     optimizer = tf.train.AdamOptimizer(learning_rate=0.001).minimize(cost)
 
-keep_prob = tf.placeholder(tf.float32)
-
 is_correct = tf.equal(tf.arg_max(H, 1), tf.arg_max(Y, 1))
 accuracy = tf.reduce_mean(tf.cast(is_correct, tf.float32))
-
-training_epochs = 15
-batch_size = 100
 
 with tf.Session() as sess:
     merged_summary = tf.summary.merge_all()
