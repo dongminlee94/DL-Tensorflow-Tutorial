@@ -20,6 +20,7 @@ L2 = tf.nn.conv2d(L1, W2, strides=[1,1,1,1], padding='SAME')
 L2 = tf.nn.relu(L2)
 L2 = tf.nn.max_pool(L2, ksize=[1,2,2,1], strides=[1,2,2,1], padding='SAME')
 L2 = tf.reshape(L2, [-1, 7 * 7 * 64])
+# 다시 원래 모양으로 돌린다.
 
 W3 = tf.get_variable("W3", shape=[7*7*64, 10], initializer=tf.contrib.layers.xavier_initializer())
 b = tf.Variable(tf.random_normal([10]))
