@@ -1,21 +1,19 @@
+# class 사용
 import tensorflow as tf
 import numpy as np
 import matplotlib.pyplot as plt
 import random
 from tensorflow.examples.tutorials.mnist import input_data
 
-#Python class를 사용
-
 tf.set_random_seed(777)
 
 mnist = input_data.read_data_sets("MNIST_data/", one_hot=True)
-# Check out https://www.tensorflow.org/get_started/mnist/beginners for
-# more information about the mnist dataset
 
 # hyper parameters
 learning_rate = 0.001
 training_epochs = 15
 batch_size = 100
+# 이렇게 한꺼번에 써놔야 나중에 바꾸기 편하다.
 
 class Model:
 
@@ -26,8 +24,7 @@ class Model:
 
     def _build_net(self):
         with tf.variable_scope(self.name):
-            # dropout (keep_prob) rate  0.7~0.5 on training, but should be 1
-            # for testing
+            # dropout (keep_prob) rate  0.7~0.5 on training, but should be 1 for testing
             self.keep_prob = tf.placeholder(tf.float32)
 
             # input place holders
@@ -99,7 +96,7 @@ class Model:
             Tensor("dropout_3/mul:0", shape=(?, 625), dtype=float32)
             '''
 
-            # L5 Final FC 625 inputs -> 10 outputs
+            # L5 Final Fully Connected 625 inputs -> 10 outputs
             W5 = tf.get_variable("W5", shape=[625, 10],
                                  initializer=tf.contrib.layers.xavier_initializer())
             b5 = tf.Variable(tf.random_normal([10]))
@@ -114,8 +111,7 @@ class Model:
         self.optimizer = tf.train.AdamOptimizer(
             learning_rate=learning_rate).minimize(self.cost)
 
-        correct_prediction = tf.equal(
-            tf.argmax(self.logits, 1), tf.argmax(self.Y, 1))
+        correct_prediction = tf.equal(tf.argmax(self.logits, 1), tf.argmax(self.Y, 1))
         self.accuracy = tf.reduce_mean(tf.cast(correct_prediction, tf.float32))
 
     def predict(self, x_test, keep_prop=1.0):
@@ -129,29 +125,29 @@ class Model:
             self.X: x_data, self.Y: y_data, self.keep_prob: keep_prop})
 
 # initialize
-sess = tf.Session()
-m1 = Model(sess, "m1")
+with tf.Session() as sess:
+    m1 = Model(sess, "m1")
 
-sess.run(tf.global_variables_initializer())
+    sess.run(tf.global_variables_initializer())
 
-print('Learning Started!')
+    print('Learning Started!')
 
-# train my model
-for epoch in range(training_epochs):
-    avg_cost = 0
-    total_batch = int(mnist.train.num_examples / batch_size)
+    # train my model
+    for epoch in range(training_epochs):
+        avg_cost = 0
+        total_batch = int(mnist.train.num_examples / batch_size)
 
-    for i in range(total_batch):
-        batch_xs, batch_ys = mnist.train.next_batch(batch_size)
-        c, _ = m1.train(batch_xs, batch_ys)
-        avg_cost += c / total_batch
+        for i in range(total_batch):
+            batch_xs, batch_ys = mnist.train.next_batch(batch_size)
+            c, _ = m1.train(batch_xs, batch_ys)
+            avg_cost += c / total_batch
 
-    print('Epoch:', '%04d' % (epoch + 1), 'cost =', '{:.9f}'.format(avg_cost))
+        print('Epoch:', '%04d' % (epoch + 1), 'cost =', '{:.9f}'.format(avg_cost))
 
-print('Learning Finished!')
+    print('Learning Finished!')
 
-# Test model and check accuracy
-print('Accuracy:', m1.get_accuracy(mnist.test.images, mnist.test.labels))
+    # Test model and check accuracy
+    print('Accuracy:', m1.get_accuracy(mnist.test.images, mnist.test.labels))
 
 #####################################################################################
 
@@ -160,14 +156,11 @@ print('Accuracy:', m1.get_accuracy(mnist.test.images, mnist.test.labels))
 tf.set_random_seed(777)  # reproducibility
 
 mnist = input_data.read_data_sets("MNIST_data/", one_hot=True)
-# Check out https://www.tensorflow.org/get_started/mnist/beginners for
-# more information about the mnist dataset
 
 # hyper parameters
 learning_rate = 0.001
 training_epochs = 15
 batch_size = 100
-
 
 class Model:
 
@@ -178,8 +171,7 @@ class Model:
 
     def _build_net(self):
         with tf.variable_scope(self.name):
-            # dropout (keep_prob) rate  0.7~0.5 on training, but should be 1
-            # for testing
+            # dropout (keep_prob) rate  0.7~0.5 on training, but should be 1 for testing
             self.training = tf.placeholder(tf.bool)
 
             # input place holders
@@ -248,29 +240,29 @@ class Model:
             self.X: x_data, self.Y: y_data, self.training: training})
 
 # initialize
-sess = tf.Session()
-m1 = Model(sess, "m1")
+with tf.Session() as sess:
+    m1 = Model(sess, "m1")
 
-sess.run(tf.global_variables_initializer())
+    sess.run(tf.global_variables_initializer())
 
-print('Learning Started!')
+    print('Learning Started!')
 
-# train my model
-for epoch in range(training_epochs):
-    avg_cost = 0
-    total_batch = int(mnist.train.num_examples / batch_size)
+    # train my model
+    for epoch in range(training_epochs):
+        avg_cost = 0
+        total_batch = int(mnist.train.num_examples / batch_size)
 
-    for i in range(total_batch):
-        batch_xs, batch_ys = mnist.train.next_batch(batch_size)
-        c, _ = m1.train(batch_xs, batch_ys)
-        avg_cost += c / total_batch
+        for i in range(total_batch):
+            batch_xs, batch_ys = mnist.train.next_batch(batch_size)
+            c, _ = m1.train(batch_xs, batch_ys)
+            avg_cost += c / total_batch
 
-    print('Epoch:', '%04d' % (epoch + 1), 'cost =', '{:.9f}'.format(avg_cost))
+        print('Epoch:', '%04d' % (epoch + 1), 'cost =', '{:.9f}'.format(avg_cost))
 
-print('Learning Finished!')
+    print('Learning Finished!')
 
-# Test model and check accuracy
-print('Accuracy:', m1.get_accuracy(mnist.test.images, mnist.test.labels))
+    # Test model and check accuracy
+    print('Accuracy:', m1.get_accuracy(mnist.test.images, mnist.test.labels))
 
 #############################################################################3
 
@@ -285,7 +277,6 @@ learning_rate = 0.001
 training_epochs = 20
 batch_size = 100
 
-
 class Model:
 
     def __init__(self, sess, name):
@@ -295,8 +286,7 @@ class Model:
 
     def _build_net(self):
         with tf.variable_scope(self.name):
-            # dropout (keep_prob) rate  0.7~0.5 on training, but should be 1
-            # for testing
+            # dropout (keep_prob) rate  0.7~0.5 on training, but should be 1 for testing
             self.training = tf.placeholder(tf.bool)
 
             # input place holders
@@ -365,47 +355,55 @@ class Model:
             self.X: x_data, self.Y: y_data, self.training: training})
 
 # initialize
-sess = tf.Session()
+with tf.Session() as sess:
 
-models = []
-num_models = 2
-for m in range(num_models):
-    models.append(Model(sess, "model" + str(m)))
+    # 앙상블을 위해서 여러개의 모델을 담을 공간을 준비한다.
+    # 7를 준비하여 총 모델을 7개를 돌려서 합친다음 뽑아낸다.
+    models = []
+    num_models = 7
+    for m in range(num_models):
+        models.append(Model(sess, "model" + str(m)))
 
-sess.run(tf.global_variables_initializer())
+    sess.run(tf.global_variables_initializer())
 
-print('Learning Started!')
+    print('Learning Started!')
 
-# train my model
-for epoch in range(training_epochs):
-    avg_cost_list = np.zeros(len(models))
-    total_batch = int(mnist.train.num_examples / batch_size)
-    for i in range(total_batch):
-        batch_xs, batch_ys = mnist.train.next_batch(batch_size)
+    # train my model
+    for epoch in range(training_epochs):
+        avg_cost_list = np.zeros(len(models))
+        total_batch = int(mnist.train.num_examples / batch_size)
+        for i in range(total_batch):
+            batch_xs, batch_ys = mnist.train.next_batch(batch_size)
 
-        # train each model
-        for m_idx, m in enumerate(models):
-            c, _ = m.train(batch_xs, batch_ys)
-            avg_cost_list[m_idx] += c / total_batch
+            # train each model
+            for m_idx, m in enumerate(models):
+                c, _ = m.train(batch_xs, batch_ys)
+                avg_cost_list[m_idx] += c / total_batch
 
-    print('Epoch:', '%04d' % (epoch + 1), 'cost =', avg_cost_list)
+        print('Epoch:', '%04d' % (epoch + 1), 'cost =', avg_cost_list)
 
-print('Learning Finished!')
+    print('Learning Finished!')
 
-# Test model and check accuracy
-test_size = len(mnist.test.labels)
-predictions = np.zeros(test_size * 10).reshape(test_size, 10)
-for m_idx, m in enumerate(models):
-    print(m_idx, 'Accuracy:', m.get_accuracy(mnist.test.images, mnist.test.labels))
-    p = m.predict(mnist.test.images)
-    predictions += p
+    # Test model and check accuracy
+    test_size = len(mnist.test.labels)
+    predictions = np.zeros(test_size * 10).reshape(test_size, 10)
+    # 각각마다 테스트를 할 공간을 만들어주자.
+    # np.zeros를 하면 그 할당만큼 0으로 벡터가 만들어진다.
 
-ensemble_correct_prediction = tf.equal(tf.argmax(predictions, 1), tf.argmax(mnist.test.labels, 1))
-ensemble_accuracy = tf.reduce_mean(tf.cast(ensemble_correct_prediction, tf.float32))
-print('Ensemble accuracy:', sess.run(ensemble_accuracy))
+    for m_idx, m in enumerate(models):
+        # m으로 하면 모델을 하나씩 꺼낸다.
+        print(m_idx, 'Accuracy:', m.get_accuracy(mnist.test.images, mnist.test.labels))
+        p = m.predict(mnist.test.images)
+        predictions += p
+        # sum와 같은 역할을 여기서 한다. 하나로 모아준다.
 
-# plt.imshow(mnist.test.images[r:r+1].reshape(28, 28), cmap='Greys', interpolation='nearest')
-# plt.show()
+    ensemble_correct_prediction = tf.equal(tf.argmax(predictions, 1), tf.argmax(mnist.test.labels, 1))
+    ensemble_accuracy = tf.reduce_mean(tf.cast(ensemble_correct_prediction, tf.float32))
+    print('Ensemble accuracy:', sess.run(ensemble_accuracy))
+
+    # plt.imshow(mnist.test.images[r:r+1].reshape(28, 28), cmap='Greys', interpolation='nearest')
+    # plt.show()
+
 '''
 0 Accuracy: 0.9933
 1 Accuracy: 0.9946

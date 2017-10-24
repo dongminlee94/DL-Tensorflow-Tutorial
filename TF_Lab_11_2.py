@@ -1,3 +1,4 @@
+# CNN 99% (no classes)
 import tensorflow as tf
 from tensorflow.examples.tutorials.mnist import input_data
 import random
@@ -5,24 +6,51 @@ import matplotlib.pyplot as plt
 
 mnist = input_data.read_data_sets("MNIST_data/", one_hot=True)
 
+# input placeholders
 X = tf.placeholder(tf.float32, [None, 784])
 X_img = tf.reshape(X, [-1, 28, 28, 1])
 # img 28x28x1
 Y = tf.placeholder(tf.float32, [None, 10])
 
+# L1 ImgIn shape=(?, 28, 28, 1)
 W1 = tf.Variable(tf.random_normal([3,3,1,32], stddev=0.01))
+# 필터가 32개
+# Conv -> (?, 28, 28, 32)
+# Pool -> (?, 14, 14, 32)
+
+# stddev는 정규분포의 표준편차를 뜻한다.
+# 정규분포에서 선택한 값이 커지지 않도록 고른 값을 적용했을 때 커지지 않도록 막아준다.
+# 기본값이 원래 stddev=1.0이기 때문에 기본 input값에 따라 발산하게 될 확률이 높다.
+# softmax를 보면 값이 갑자기 커지게 된다. 에러값이 갑자기 커지는 경우는
+# 패턴값이 정규분포를 가진다는 전체하에 발산하지 않도록 만든다.
+
 L1 = tf.nn.conv2d(X_img, W1, strides=[1,1,1,1], padding='SAME')
+# 여기서 통과할 때 padding='SAME'으로 했기 때문에 28x28로 동일하게 나온다.
 L1 = tf.nn.relu(L1)
 L1 = tf.nn.max_pool(L1, ksize=[1,2,2,1], strides=[1,2,2,1], padding='SAME')
+'''
+Tensor("Conv2D:0", shape=(?, 28, 28, 32), dtype=float32)
+Tensor("Relu:0", shape=(?, 28, 28, 32), dtype=float32)
+Tensor("MaxPool:0", shape=(?, 14, 14, 32), dtype=float32)
+'''
 
+# L2 ImgIn shape=(?, 14, 14, 32)
 W2 = tf.Variable(tf.random_normal([3,3,32,64], stddev=0.01))
 L2 = tf.nn.conv2d(L1, W2, strides=[1,1,1,1], padding='SAME')
 L2 = tf.nn.relu(L2)
 L2 = tf.nn.max_pool(L2, ksize=[1,2,2,1], strides=[1,2,2,1], padding='SAME')
 L2 = tf.reshape(L2, [-1, 7 * 7 * 64])
 # 다시 원래 모양으로 돌린다.
+'''
+Tensor("Conv2D_1:0", shape=(?, 14, 14, 64), dtype=float32)
+Tensor("Relu_1:0", shape=(?, 14, 14, 32), dtype=float32)
+Tensor("MaxPool_1:0", shape=(?, 7, 7, 32), dtype=float32)
+Tensor("reshape_1:0", shape=(?, 3136), dtype=float32)
+'''
 
+# Final Fully Connected 7x7x64 inputs -> 10 outputs
 W3 = tf.get_variable("W3", shape=[7*7*64, 10], initializer=tf.contrib.layers.xavier_initializer())
+# 10은 output 0~9까지 중에 하나로 예측한다.
 b = tf.Variable(tf.random_normal([10]))
 H = tf.matmul(L2, W3) + b
 
