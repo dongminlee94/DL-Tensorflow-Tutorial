@@ -321,7 +321,7 @@ class Model:
             dropout3 = tf.layers.dropout(inputs=pool3,
                                          rate=0.7, training=self.training)
 
-            # Dense Layer with Relu
+            # Dense Layer with Relu(W의 개수 내가 설정해서 돌릴 수 있다.)
             flat = tf.reshape(dropout3, [-1, 128 * 4 * 4])
             dense4 = tf.layers.dense(inputs=flat,
                                      units=625, activation=tf.nn.relu)
