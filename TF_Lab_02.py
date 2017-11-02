@@ -1,3 +1,5 @@
+# TF로 간단한 Linear regression 구현
+
 import tensorflow as tf
 
 # H(x) = Wx + b

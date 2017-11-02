@@ -1,3 +1,5 @@
+# TF_Lab_11_3 tensorboard
+
 import tensorflow as tf
 import numpy as np
 from tensorflow.examples.tutorials.mnist import input_data
@@ -127,4 +129,3 @@ with tf.Session() as sess:
     ensemble_correct_prediction = tf.equal(tf.argmax(predictions, 1), tf.argmax(mnist.test.labels, 1))
     ensemble_accuracy = tf.reduce_mean(tf.cast(ensemble_correct_prediction, tf.float32))
     print('Ensemble accurcracy:', sess.run(ensemble_accuracy))
-

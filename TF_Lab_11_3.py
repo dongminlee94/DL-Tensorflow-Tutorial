@@ -1,4 +1,5 @@
-# class 사용
+# CNN class, Layers, Ensemble
+
 import tensorflow as tf
 import numpy as np
 import matplotlib.pyplot as plt

@@ -1,3 +1,5 @@
+# TF로 파일에서 데이터 읽어오기
+
 import tensorflow as tf
 import numpy as np
 

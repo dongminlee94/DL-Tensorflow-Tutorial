@@ -1,3 +1,5 @@
+# Linear Regression의 cost 최소화
+
 import tensorflow as tf
 import matplotlib.pyplot as plt
 # 그래프를 그릴 때 사용하는 라이브러리

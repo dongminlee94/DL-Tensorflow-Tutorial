@@ -1,6 +1,7 @@
+# Fancy Sortmax Classification - cross_entropy, one_hot, reshape
+
 import tensorflow as tf
 import numpy as np
-# Fancy Sortmax Classifier - cross_entropy, one_hot, reshape
 
 # softmax_cross_entropy_with_logits
 # 항상 logits을 생각해야한다.

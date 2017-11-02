@@ -1,3 +1,5 @@
+# training / test, dataset, learning_rate, normalization
+
 import tensorflow as tf
 import numpy as np
 

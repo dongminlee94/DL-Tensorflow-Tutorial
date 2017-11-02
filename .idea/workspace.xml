@@ -1,7 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="701c4e5c-ca54-44e3-a5cf-bd508a3ae668" name="Default" comment="" />
+    <list default="true" id="701c4e5c-ca54-44e3-a5cf-bd508a3ae668" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TF_Lab_12_1.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TF_Lab_12_2.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TF_Lab_12_3.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TF_Lab_12_4.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TF_Lab_12_5.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TF_Lab_01.py" afterPath="$PROJECT_DIR$/TF_Lab_01.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TF_Lab_02.py" afterPath="$PROJECT_DIR$/TF_Lab_02.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TF_Lab_03.py" afterPath="$PROJECT_DIR$/TF_Lab_03.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TF_Lab_04_1.py" afterPath="$PROJECT_DIR$/TF_Lab_04_1.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TF_Lab_04_2.py" afterPath="$PROJECT_DIR$/TF_Lab_04_2.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TF_Lab_05.py" afterPath="$PROJECT_DIR$/TF_Lab_05.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TF_Lab_06_1.py" afterPath="$PROJECT_DIR$/TF_Lab_06_1.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TF_Lab_06_2.py" afterPath="$PROJECT_DIR$/TF_Lab_06_2.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TF_Lab_07_1.py" afterPath="$PROJECT_DIR$/TF_Lab_07_1.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TF_Lab_07_2.py" afterPath="$PROJECT_DIR$/TF_Lab_07_2.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TF_Lab_09_1.py" afterPath="$PROJECT_DIR$/TF_Lab_09_1.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TF_Lab_09_2.py" afterPath="$PROJECT_DIR$/TF_Lab_09_2.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TF_Lab_09_3.py" afterPath="$PROJECT_DIR$/TF_Lab_09_3.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TF_Lab_10_1.py" afterPath="$PROJECT_DIR$/TF_Lab_10_1.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TF_Lab_11_1.py" afterPath="$PROJECT_DIR$/TF_Lab_11_1.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TF_Lab_11_2.py" afterPath="$PROJECT_DIR$/TF_Lab_11_2.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TF_Lab_11_3.py" afterPath="$PROJECT_DIR$/TF_Lab_11_3.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TF_Lab_11_4.py" afterPath="$PROJECT_DIR$/TF_Lab_11_4.py" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -11,14 +38,70 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="TF_Lab_11_4.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TF_Lab_11_4.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TF_Lab_11_4.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
-              <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+            <state relative-caret-position="392">
+              <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TF_Lab_12_1.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/TF_Lab_12_1.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="28">
+              <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
               <folding>
-                <element signature="e#0#23#0" expanded="true" />
+                <element signature="e#14#37#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TF_Lab_12_2.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/TF_Lab_12_2.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="16" lean-forward="false" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="16" />
+              <folding>
+                <element signature="e#27#50#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TF_Lab_12_3.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/TF_Lab_12_3.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="308">
+              <caret line="95" column="13" lean-forward="true" selection-start-line="95" selection-start-column="13" selection-end-line="95" selection-end-column="13" />
+              <folding>
+                <element signature="e#21#44#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TF_Lab_12_4.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/TF_Lab_12_4.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="840">
+              <caret line="30" column="27" lean-forward="true" selection-start-line="30" selection-start-column="27" selection-end-line="30" selection-end-column="27" />
+              <folding>
+                <element signature="e#31#54#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TF_Lab_12_5.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/TF_Lab_12_5.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="196">
+              <caret line="7" column="18" lean-forward="true" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -42,6 +125,12 @@
       <find>tf.contri</find>
       <find>flatten</find>
       <find>tf.contrib.layers.f</find>
+      <find>print_fu</find>
+      <find>rnn</find>
+      <find>dic_si</find>
+      <find>hidden_</find>
+      <find>num_class</find>
+      <find>state</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -50,11 +139,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/../PythonBasic/test.py" />
-        <option value="$PROJECT_DIR$/Lab4o2p1.py" />
-        <option value="$PROJECT_DIR$/Lab2p5.py" />
-        <option value="$PROJECT_DIR$/../PythonBasic/pbp7o1p.py" />
-        <option value="$PROJECT_DIR$/../PythonBasic/pbp7o2(pdf연습문제과제).py" />
         <option value="$PROJECT_DIR$/Lab5p.py" />
         <option value="$PROJECT_DIR$/Lab6o1p.py" />
         <option value="$PROJECT_DIR$/Lab5p1.py" />
@@ -101,13 +185,37 @@
         <option value="$PROJECT_DIR$/TF_Lab_11_1.py" />
         <option value="$PROJECT_DIR$/TF_test.py" />
         <option value="$PROJECT_DIR$/TF_Lab_11_4.py" />
+        <option value="$PROJECT_DIR$/TF_Lab_12_1.py" />
+        <option value="$PROJECT_DIR$/TF_Lab_12_2.py" />
+        <option value="$PROJECT_DIR$/TF_Lab_12_3.py" />
+        <option value="$PROJECT_DIR$/TF_Lab_12_4.py" />
+        <option value="$PROJECT_DIR$/TF_Lab_12_5.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="1">
     <option name="x" value="950" />
     <option name="width" value="980" />
     <option name="height" value="1044" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>Python</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>PyCompatibilityInspection</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -144,8 +252,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.TF_Lab_11_4">
-    <configuration name="TF_Lab_09_3" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.TF_Lab_12_5">
+    <configuration name="TF_Lab_12_1" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -157,12 +265,12 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="TensorFlow" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/TF_Lab_09_3.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/TF_Lab_12_1.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
-    <configuration name="TF_Lab_10_1" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="TF_Lab_12_2" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -174,12 +282,12 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="TensorFlow" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/TF_Lab_10_1.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/TF_Lab_12_2.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
-    <configuration name="TF_Lab_10_2" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="TF_Lab_12_3" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -191,12 +299,12 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="TensorFlow" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/TF_Lab_10_2.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/TF_Lab_12_3.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
-    <configuration name="TF_Lab_11_1" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="TF_Lab_12_4" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -208,12 +316,12 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="TensorFlow" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/TF_Lab_11_1.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/TF_Lab_12_4.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
-    <configuration name="TF_Lab_11_4" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="TF_Lab_12_5" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -225,7 +333,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="TensorFlow" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/TF_Lab_11_4.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/TF_Lab_12_5.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -295,19 +403,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.TF_Lab_09_3" />
-      <item index="1" class="java.lang.String" itemvalue="Python.TF_Lab_10_1" />
-      <item index="2" class="java.lang.String" itemvalue="Python.TF_Lab_10_2" />
-      <item index="3" class="java.lang.String" itemvalue="Python.TF_Lab_11_1" />
-      <item index="4" class="java.lang.String" itemvalue="Python.TF_Lab_11_4" />
+      <item index="0" class="java.lang.String" itemvalue="Python.TF_Lab_12_1" />
+      <item index="1" class="java.lang.String" itemvalue="Python.TF_Lab_12_2" />
+      <item index="2" class="java.lang.String" itemvalue="Python.TF_Lab_12_3" />
+      <item index="3" class="java.lang.String" itemvalue="Python.TF_Lab_12_4" />
+      <item index="4" class="java.lang.String" itemvalue="Python.TF_Lab_12_5" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.TF_Lab_11_4" />
-        <item index="1" class="java.lang.String" itemvalue="Python.TF_Lab_11_1" />
-        <item index="2" class="java.lang.String" itemvalue="Python.TF_Lab_10_2" />
-        <item index="3" class="java.lang.String" itemvalue="Python.TF_Lab_10_1" />
-        <item index="4" class="java.lang.String" itemvalue="Python.TF_Lab_09_3" />
+        <item index="0" class="java.lang.String" itemvalue="Python.TF_Lab_12_5" />
+        <item index="1" class="java.lang.String" itemvalue="Python.TF_Lab_12_4" />
+        <item index="2" class="java.lang.String" itemvalue="Python.TF_Lab_12_3" />
+        <item index="3" class="java.lang.String" itemvalue="Python.TF_Lab_12_2" />
+        <item index="4" class="java.lang.String" itemvalue="Python.TF_Lab_12_1" />
       </list>
     </recent_temporary>
   </component>
@@ -325,7 +433,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-11" y="-11" width="1942" height="1056" extended-state="6" />
+    <frame x="950" y="0" width="980" height="1044" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35908142" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -333,9 +441,9 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3047404" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3043478" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32731378" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32620922" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39954597" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -385,11 +493,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Lab2p2.py" />
-    <entry file="file://$PROJECT_DIR$/Lab2p3.py" />
-    <entry file="file://$PROJECT_DIR$/Lab2p4.py" />
-    <entry file="file://$PROJECT_DIR$/Lab2p5.py" />
-    <entry file="file://$PROJECT_DIR$/Lab2p6.py" />
     <entry file="file://$PROJECT_DIR$/Lab3p.py" />
     <entry file="file://$PROJECT_DIR$/Lab3p1.py" />
     <entry file="file://$PROJECT_DIR$/Lab3p2.py" />
@@ -467,21 +570,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TF_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="28">
-          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/TF_test.py" />
     <entry file="file://$PROJECT_DIR$/TF_Lab_11_1.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
           <caret line="6" column="18" lean-forward="false" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
-          <folding>
-            <marker date="1508819883894" expanded="true" signature="166:190" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -489,7 +582,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="56">
           <caret line="2" column="18" lean-forward="true" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -497,19 +589,62 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
           <caret line="152" column="20" lean-forward="true" selection-start-line="152" selection-start-column="20" selection-end-line="152" selection-end-column="20" />
-          <folding>
-            <element signature="e#23#46#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/TF_Lab_11_4.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+        <state relative-caret-position="392">
+          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TF_Lab_12_1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="28">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding>
-            <element signature="e#0#23#0" expanded="true" />
+            <element signature="e#14#37#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TF_Lab_12_2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="16" lean-forward="false" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="16" />
+          <folding>
+            <element signature="e#27#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TF_Lab_12_3.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="95" column="13" lean-forward="true" selection-start-line="95" selection-start-column="13" selection-end-line="95" selection-end-column="13" />
+          <folding>
+            <element signature="e#21#44#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TF_Lab_12_4.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="840">
+          <caret line="30" column="27" lean-forward="true" selection-start-line="30" selection-start-column="27" selection-end-line="30" selection-end-column="27" />
+          <folding>
+            <element signature="e#31#54#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TF_Lab_12_5.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="7" column="18" lean-forward="true" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
+          <folding />
         </state>
       </provider>
     </entry>

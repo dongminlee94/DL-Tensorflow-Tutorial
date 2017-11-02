@@ -1,3 +1,5 @@
+# NN for XOR with tensorboard
+
 import tensorflow as tf
 import numpy as np
 

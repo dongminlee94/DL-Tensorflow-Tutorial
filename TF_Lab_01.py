@@ -1,3 +1,5 @@
+# TF의 설치 및 기본적인 operations
+
 import tensorflow as tf
 
 hello = tf.constant('Hello, TensorFlow')
